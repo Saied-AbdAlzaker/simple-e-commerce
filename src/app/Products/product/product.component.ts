@@ -25,9 +25,9 @@ export class ProductComponent implements OnInit {
         this.productList = res;
       },
       error: (err) => {
-        this._toastr.error(err.error.message, 'Error!')
+        this._toastr.error('data fetch fails.', 'Error!')
       },
-      complete: () => { this._toastr.success('', 'Success') },
+      complete: () => { this._toastr.success('data fetch success.', 'Success') },
     })
   }
 

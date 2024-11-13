@@ -1,28 +1,12 @@
 <section>
     <div class="container">
-        <div class="row mt-3">
-            <div class="col-md-4 rounded-3">
-                <div class="card position-relative shadow bg-light p-3">
-                    <h3>Product Image </h3>
-                    <p>Title</p>
-                    <p>Price</p>
-                    <span class="position-absolute top-0 end-0 bg-info rounded-2 px-2">Rating</span>
-                </div>
-            </div>
-            <div class="col-md-4 rounded-3">
-                <div class="card position-relative shadow bg-light p-3">
-                    <h3>Product Image </h3>
-                    <p>Title</p>
-                    <p>Price</p>
-                    <span class="position-absolute top-0 end-0 bg-info rounded-2 px-2">Rating</span>
-                </div>
-            </div>
-            <div class="col-md-4 rounded-3">
-                <div class="card position-relative shadow bg-light p-3">
-                    <h3>Product Image </h3>
-                    <p>Title</p>
-                    <p>Price</p>
-                    <span class="position-absolute top-0 end-0 bg-info rounded-2 px-2">Rating</span>
+        <div class="row gy-3 mt-2">
+            <div class="col-md-3 rounded-3" *ngFor="let product of productList">
+                <div class="card position-relative p-3">
+                    <span class="w-75 h-75"><img [src]="product.image" [alt]="product.title" class="img-fluid w-100"></span>
+                    <h6 class="text-muted">{{product.title}}</h6>
+                    <p class="text-price">{{product.price}}</p>
+                    <span class="position-absolute top-0 end-0 card-color rounded-2 px-2">{{product.rating?.rate}}</span>
                 </div>
             </div>
         </div>

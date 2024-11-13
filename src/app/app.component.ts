@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'simple-e-commerce-task';
+
+  constructor(private spinner: NgxSpinnerService) {
+    spinner.show();
+
+    setTimeout(() => {
+      spinner.hide();
+    }, 3000);
+  }
 }

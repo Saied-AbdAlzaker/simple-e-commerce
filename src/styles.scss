@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+$main-color: #E2E5EB;
+$second-color: #4AA35A;
+$text-color: #494949;
+$card-color: #1F263E;
+
+body {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    background-color: $main-color;
+}
+
+.text-price {
+    color: $second-color;
+}
+
+.text-color {
+    color: $text-color;
+}
+
+.card-color {
+    background-color: $card-color;
+    color: #ffff;
+}
